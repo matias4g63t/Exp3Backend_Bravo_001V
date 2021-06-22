@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Aeronave</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Creando aeronave</h1>
+        </div>
+        <div class="row">
+            <form method="POST" action="#" id="formulario">
+                {%csrf_token%}
+                <div class="row">
+                    {{aeronave.numeroSerie.label}}
+                    {{aeronave.numeroSerie}}
+                </div>
+                <div class="row">
+                    {{aeronave.marca.label}}
+                    {{aeronave.marca}}
+                </div>
+                <div class="row">
+                    {{aeronave.modelo.label}}
+                    {{aeronave.modelo}}
+                </div>
+                <div class="row">
+                    {{aeronave.categoria.label}}
+                    {{aeronave.categoria}}
+                </div>
+                <div class="row">
+                    <input type="submit" class="btn btn-danger" id="enviar" value="enviar">
+                    <input type="reset" class="btn btn-primary" id="limpiar" value="limpiar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

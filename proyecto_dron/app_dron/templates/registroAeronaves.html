@@ -55,10 +55,30 @@
             </center>  
         </div>
         <div class="row">
-            <form method="POST" action="#" id="formulario">
-                
-            </form>
+            <h1>Aeronaves registradas:</h1>
         </div>
+        <div class="row">
+            <table border="1">
+                <tr>
+                    <td>Numero serie</td>
+                    <td>Marca</td>
+                    <td>Modelo</td>
+                </tr>
+                {% for ae in datos %}
+                    <tr>
+                        <td>{{ae.numeroSerie}}</td>
+                        <td>{{ae.modelo}}</td>
+                        <td>{{ae.marca}}</td>
+                    </tr>
+                {%endfor%}
+            </table>
+
+
+
+        </div>
+
+
+
     </div>
     <div class="row">
         <div class="col-xl-12"  style="background-color:rgb(224, 224, 224)">
