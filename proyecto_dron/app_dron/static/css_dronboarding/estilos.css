@@ -1,0 +1,36 @@
+.header{
+    text-align: left;
+    color: #050505;
+    font-family: initial;
+}
+.header_logo{
+    float: left;
+}
+
+.centrar_imagen{
+    display:block;
+    margin:auto;  
+}
+
+.centrar_titulo{
+    text-align: center;
+    color: #000000;
+    font-family: initial;
+}
+
+.derechos_reservados{
+    float: right;
+}
+
+.derechos_reservados{
+    float: right;
+}
+
+.fondos_parrafos{
+    background-color: rgb(147, 182, 214);
+     color: white;
+}
+
+padding{
+    padding: 35px 70px 50px 90px;
+  }
