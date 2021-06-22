@@ -15,5 +15,5 @@ class Aeronave(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.patente
+        return self.numeroSerie
     
