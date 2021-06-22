@@ -23,3 +23,20 @@ def crearAeronave(request):
     else:
         aeronave=AeronaveForm() 
     return render(request, 'app_dron/form_crearAeronave.html',{'aeronave': aeronave})
+
+def Ver(request):
+    aeronaves = Aeronave.objects.all()
+    return render(request,'registroAeronaves', context={'aeronaves':aeronaves})
+
+def form_modificar_aeronave(request,id):
+    aeronave = Aeronave.objects.get(numeroSerie =id)
+    
+    datos={
+        'form': AeronaveForm(instance=aeronave)
+    }
+    if request.method == "POST":
+        formulario = AeronaveForm(data=request.POST, instance = aeronave)
+        if formulario.is_valid:
+            formulario.save()
+            return redirect('registroAeronaves')
+    return render(request, 'app_dron/form_modificar_aeronave.html', datos)
