@@ -40,3 +40,8 @@ def form_modificar_aeronave(request,id):
             formulario.save()
             return redirect('registroAeronaves')
     return render(request, 'app_dron/form_modificar_aeronave.html', datos)
+
+def form_eliminar_aeronave(request,id):
+    aeronave = Aeronave.objects.get(numeroSerie=id)
+    aeronave.delete()
+    return redirect('registroAeronaves')

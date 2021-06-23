@@ -90,49 +90,55 @@
         <link rel="stylesheet" type="text/css" href="css_dronboarding/estilos.css"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         {%load static%}
     </head>
     <body>
         {%load static%}
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- logo -->
-            <a class="navbar-brand" href="#">
-              <img src="{% static 'img_dronboarding/Logo_dronboarding.png'%}" width="150" height="150" alt="">
-            </a>
-            
-            <!-- enlaces -->
-            <div class="collapse navbar-collapse" id="opciones">   
-                <ul class="navbar-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <img src="{% static 'img_dronboarding/Logo_dronboarding.png'%}" width="150" height="150" alt="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index'%}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'index'%}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="quienes_somos.html">Quienes somos</a>
+                    <a class="nav-link" href="#">Quienes somos</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'galeria'%}">Galeria</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="form_1.html">Inscripcion cursos</a>
-                    </li>
+                    <a class="nav-link" href="#">Inscripcion cursos</a>
+                  </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="form_2.html">comentanos tus ideas</a>
-                  </li>  
+                    <a class="nav-link" href="#">Ideas?</a>
+                  </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="api.html">Feriados para volar</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'crearAeronave'%}">Registrar Aeronaves</a>
-                </li>    
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'registroAeronaves'%}">Aeronaves registradas</a>
-                </li>                
+                    <a class="nav-link" href="#">Feriados para volar</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Registros aeronaves
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="{% url 'crearAeronave'%}">Registrar</a></li>
+                      <li><a class="dropdown-item" href="{% url 'registroAeronaves'%}">Listados y edicion</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                    </ul>
+                  </li>
                 </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
               </div>
+            </div>
+          </nav>
         <div>
           </nav>
             <div class="container">
